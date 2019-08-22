@@ -12,7 +12,7 @@ public class EmpTest {
 	}
 	
 	public void mainMenu() {
-		Employee e = new Employee();
+		Employee e = new Employee(); //Employee e = null; = 초기화설정, 1을 입력받아 새로 만들 때  객체화
 		input:
 		for(;;) {
 			
@@ -33,15 +33,20 @@ public class EmpTest {
 			//입력값에 따라 메서드 실행
 			switch(inputInt) {
 			case 1:
+				//e = new Employee();
 				e.empInput();
 				break;
 			case 2:
 				this.modifyMenu(e);
 				break;
 			case 3:
-				e = new Employee();
+				e = new Employee();//e = null;
 				break;
 			case 4:
+				if(e==null) {
+					System.out.println("먼저 사원 정보를 입력하세요.");
+					break;
+				}
 				e.empOutput();
 				break;
 			case 9:
@@ -53,7 +58,13 @@ public class EmpTest {
 		}
 	}
 	
-	public void modifyMenu(Employee e) {
+	private void modifyMenu(Employee e) {
+		//e의 null여부 확인
+		if(e==null) {
+			System.out.println("먼저 사원 정보를 입력하세요.");
+			return;
+		}
+		
 		for(;;) {
 			System.out.println("****** 사원 정보 수정 메뉴 ******");
 			System.out.println();

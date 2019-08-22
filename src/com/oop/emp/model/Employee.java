@@ -46,6 +46,10 @@ public class Employee {
 	}
 	//출력용 메서드
 	public void empOutput() {
+		//this : 현재 객체를 가리키는 메소드의 숨은 참조
+		//this.empNo이 객체의 필드변수 를 가르킨다
+		//지역변수와 구분하기 위해서 사용
+		//별도의 지역변수가 없다면 사용할 필요는 없다.
 		System.out.println("사번 : "+empNo);
 		System.out.println("이름 : "+empName);
 		System.out.println("소속부서 : "+dept);
