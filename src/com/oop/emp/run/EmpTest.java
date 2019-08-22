@@ -54,7 +54,6 @@ public class EmpTest {
 	}
 	
 	public void modifyMenu(Employee e) {
-		Employee emp = new Employee();
 		for(;;) {
 			System.out.println("****** 사원 정보 수정 메뉴 ******");
 			System.out.println();
@@ -66,28 +65,29 @@ public class EmpTest {
 			System.out.println("**************************");
 			
 			Scanner sc = new Scanner(System.in);
+			System.out.print(">>");
 			int inputInt = sc.nextInt();
 			
 			switch(inputInt) {
 			case 1:
 				System.out.print("변경할 이름을 입력하세요 : ");
 				String chName = sc.next();
-				emp.setEmpName(chName);
+				e.setEmpName(chName);
 				break;
 			case 2:
 				System.out.print("변경할 급여를 입력하세요 : ");
 				int chSalary = sc.nextInt();
-				emp.setSalary(chSalary);
+				e.setSalary(chSalary);
 				break;
 			case 3:
 				System.out.print("변경할 부서를 입력하세요 : ");
 				String chDept = sc.next();
-				emp.setDept(chDept);
+				e.setDept(chDept);
 				break;
 			case 4:
 				System.out.print("변경할 직급을 입력하세요 : ");
 				String chJob = sc.next();
-				emp.setJob(chJob);
+				e.setJob(chJob);
 				break;
 			case 5:
 				return;
