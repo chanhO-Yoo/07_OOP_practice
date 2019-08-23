@@ -32,11 +32,17 @@ public class StaticMethod {
 	//변경하는 static 메서드
 	public static void setChar(int index,char ch) {
 		value = "hello";
+		
+		//value 문자열을 문자 배열에 넣기
 		char[] arr = new char[value.length()];
 		for(int i=0;i<value.length();i++) {
 			arr[i]=value.charAt(i);
 		}
+		//value 문자열을 문자 배열에 넣기(메서드 사용)
+//		char[] arr = value.toCharArray();
+		
 		arr[index] = ch;
+		//문자 배열을 문자열로 다시 만들기.
 		String result="";
 		for(int i=0;i<arr.length;i++) {
 			result += arr[i];
