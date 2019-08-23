@@ -13,7 +13,7 @@ public class Test {
 				   //결과값 : 100
 		
 		Test t3 = new Test();
-		t.test3(t3);//예상값 : 200
+		t.test3(t3);//예상값 : 10
 					//결과값 : 10
 		
 		System.out.println(t3.a); //예상값 : 200
